@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of School Education &amp; Literacy | Ministry of Education, GoI</title>
+    <!-- this section contains the style of the page-->
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+   /* Header Section */
+        #myHeader {
+            background-color: #2c3e50;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            padding: 10px 0;
+        }
+
+        #myHeader div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        #myHeader ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #myHeader li {
+            margin-right: 30px;
+        }
+
+        #myHeader li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            line-height: 1.5;
+            display: block;
+            text-align: center;
+        }
+
+        #myHeader li a:hover {
+            color: #3498db;
+        }
+
+        #myHeader li a br {
+            display: block;
+            margin: 5px 0;
+        }
+
+        /* Accessibility and Mobile Responsiveness */
+        @media (max-width: 768px) {
+            #myHeader div {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            #myHeader ul {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            #myHeader li {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            #myHeader li a {
+                font-size: 12px;
+            }
+        }
+
+        /* Home Link Section */
+        div a {
+            display: inline-block;
+            text-decoration: none;
+            outline: none;
+            /* Remove default focus outline */
+        }
+
+        div a img {
+            max-width: 100%;
+            height: auto;
+            border: none;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        div a:hover img {
+            transform: scale(1.05);
+            /* Slight zoom effect on hover */
+        }
+
+        /* Accessibility Focus Styling */
+        div a:focus img {
+            outline: 3px solid #3498db;
+            /* Add a blue border for focus state */
+            outline-offset: 2px;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            div a img {
+                max-width: 80%;
+                /* Adjust the image size for smaller screens */
+            }
+        }
+
+
+        /* about us section */
+        /* General Layout and Navigation */
+#header {
+    background-color: #f8f9fa;
+    padding-bottom: 20px;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navbar {
+    padding: 0.5rem 1rem;
+    background-color: #5d71e4;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-item {
+    margin-right: 20px;
+}
+
+.tb-megamenu-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tb-megamenu-nav li {
+    position: relative;
+    display: inline-block;
+}
+
+/* Links style */
+.tb-megamenu-nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 12px;
+    font-size: 14px; /* Reduced font size */
+    display: block;
+}
+
+.tb-megamenu-nav a:hover, .tb-megamenu-nav .active a {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+.tb-megamenu-nav span {
+    margin-left: 5px;
+    font-size: 0.9em;
+}
+
+/* Dropdown Menu (Vertical alignment) */
+.tb-megamenu-nav li > div {
+    display: none;  /* Hide the dropdown by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.tb-megamenu-nav li:hover > div {
+    display: block; /* Show dropdown when parent is hovered */
+}
+
+/* Dropdown Items */
+.tb-megamenu-nav > li > div > ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.tb-megamenu-nav > li > div > ul li a {
+    padding: 8px 15px;
+    text-decoration: none;
+    color: #333;
+    background-color: #f8f9fa;
+    display: block;
+    font-size: 13px; /* Reduced font size */
+}
+
+.tb-megamenu-nav > li > div > ul li a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Mobile Menu Button */
+.tb-megamenu-button {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .tb-megamenu-button {
+        display: block;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        margin: 10px 0;
+    }
+
+    .nav-collapse {
+        display: block;
+    }
+
+    .tb-megamenu-nav {
+        display: none;
+    }
+
+    .tb-megamenu-nav li {
+        width: 100%;
+    }
+
+    .nav-collapse.active {
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+/* footer and more */
+/* Footer Container */
+.footerWrap {
+
+    background-color: #2974a7;
+      padding: 30px 0;
+}
+
+/* Footer Row */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Individual Footer Columns */
+.footer .footer {
+  padding: 10px;
+}
+
+.footer .footer nav {
+  margin-bottom: 20px;
+}
+
+.footer h2 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin: 5px 0;
+}
+
+.footer ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Columns width */
+.footer .footer:nth-child(1),
+.footer .footer:nth-child(2),
+.footer .footer:nth-child(3),
+.footer .footer:nth-child(4) {
+  flex: 0 0 15%;
+}
+
+/* Last column takes remaining space */
+.footer .footer:nth-child(5) {
+  flex: 1;
+  text-align: center;
+}
+
+.footer .footer .footer img {
+  max-width: 100px;
+  margin: 10px 0;
+}
+
+/* Social Media Icons */
+.footer .footer ul li a img {
+  max-width: 25px;
+  margin: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer .footer:nth-child(1),
+  .footer .footer:nth-child(2),
+  .footer .footer:nth-child(3),
+  .footer .footer:nth-child(4) {
+    flex: 0 0 20%;
+  }
+
+  .footer .footer:nth-child(5) {
+    flex: 0 0 100%;
+  }
+}
+
+
+
+
+
+/* lowest footer */
+
+/* Disclaimer Section Style */
+.disclaimer {
+  background-color: #04366b;  /* Blue background */
+  color: white;               /* White text */
+  padding: 15px 0;            /* Add padding for spacing */
+}
+
+.disclaimer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.disclaimer p {
+  margin: 0;  /* Remove default margin */
+  font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .disclaimer p {
+    font-size: 12px;  /* Smaller font size on mobile */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+        /* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Main Content */
+#main-content {
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Primary Content Area */
+#primary {
+  flex: 0 0 70%; /* Takes up 70% of the space */
+  padding-right: 20px;
+}
+
+#content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumb {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #0073e6;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+h2, h3 {
+  color: #333;
+}
+
+h3 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Table Styling */
+table.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table.data-table th, table.data-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table.data-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+table.data-table td a {
+  color: #0073e6;
+  text-decoration: none;
+}
+
+table.data-table td a:hover {
+  text-decoration: underline;
+}
+
+table.data-table td {
+  vertical-align: top;
+}
+
+/* Footer */
+#content-wrap .submitted {
+  font-size: 12px;
+  color: #777;
+  margin-top: 20px;
+}
+
+/* Sidebar */
+#rightColm {
+  flex: 0 0 28%; /* Takes up 28% of the space */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.sidebar .menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar .menu li {
+  margin-bottom: 10px;
+}
+
+.sidebar .menu li a {
+  text-decoration: none;
+  color: #0073e6;
+  font-size: 16px;
+}
+
+.sidebar .menu li a:hover {
+  text-decoration: underline;
+}
+
+.sidebar .menu .active {
+  font-weight: bold;
+  color: #005bb5;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  #primary, #rightColm {
+    flex: 0 0 100%;
+    padding-right: 0;
+  }
+}
+
+    </style>
+
+</head>
+
+<body>
+    <!-- this is header section which is in black-->
+    <div id="myHeader">
+        <div>
+            <ul>
+                <li><a href="#" target="_blank">भारत सरकार<br>Government of India</a></li>
+                <li><a href="#" target="_blank">शिक्षा मंत्रालय<br>Ministry of Education</a></li>
+                <li><a href="#main-content" title="Skip to main content">Skip to main content</a></li>
+                <li><a href="/screen-reader-access" title="Screen Reader Access">Screen Reader Access</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- this section contains image and search section of this page -->
+    <div>
+        <a href="/" title="Home" tabindex="17">
+            <img src="emblem_updated.png" alt="Home">
+            <img src="english-logo.png" alt="" style="width: 200px;">
+            <img src="azadi-ka-amrit-mahotsav-01.jpg" alt="" style="width: 200px;">
+        </a>
+    </div>
+
+    <!-- this section contains navigation like about us annd etc-->
+    <div id="header" class="">
+        <div class="container-fluid border-top" id="topNav">
+            <div class="container pl-0">
+                <nav class="navbar navbar-expand-lg navbar-light pl-0 pt-1 pb-1" role="">
+                    <div class="dash container clearfix">
+                        <div class="col-sm-12 float-left ml-0 pl-0"> <!-- block -->
+                            <div id="block-mainnavigation-6" role="navigation">
+                                <div class="tb-megamenu tb-megamenu-main">
+                                    <button data-target=".nav-collapse" data-toggle="collapse"
+                                        class="btn btn-navbar tb-megamenu-button" type="button" tabindex="19">
+                                        <i class="fa fa-reorder"></i>Menu
+                                    </button>
+                                    <div class="nav-collapse always-show" style="height: auto; overflow: visible;">
+                                        <ul class="tb-megamenu-nav nav level-0 items-11">
+                                            <!-- Home Link -->
+                                            <li class="tb-megamenu-item level-1 mega">
+                                                <a href="/" tabindex="21">Home</a>
+                                            </li>
+
+                                            <!-- About Us Section with dropdown -->
+                                            <li>
+                                                <a href="/about-us" tabindex="23">About Us<span>&#9662;</span></a>
+                                                <div>
+                                                    <ul>
+                                                        <li><a href="/about-us/ministers" tabindex="25">Minister</a>
+                                                        </li>
+                                                        <li><a href="/about-us/acts-rules" tabindex="31">Acts and
+                                                                Rules</a></li>
+                                                        <li><a href="/about-us/allocation_business_rules"
+                                                                tabindex="33">Allocation of Business Rules</a></li>
+                                                        <li><a href="/about-us/citizens-charters"
+                                                                tabindex="35">Citizen's Charter</a></li>
+                                                        <li><a href="/about-us/oc" tabindex="37">Organisation Chart</a>
+                                                        </li>
+                                                        <li><a href="/ministers/who-s-who" tabindex="39">Who's Who</a>
+                                                        </li>
+                                                        <li><a href="/sites/default/files/DoSEL_Tel_Dir.pdf"
+                                                                tabindex="41">Telephone Directory</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+
+                                            <!-- Documents & Reports Section -->
+                                            <li><a href="/pab-minutes" tabindex="43">Documents &amp; Reports</a></li>
+
+                                            <!-- Statistics Section -->
+                                            <li><a href="/statistics?field_statistics_category_target_id=233"
+                                                    tabindex="45">Statistics</a></li>
+
+                                            <!-- Autonomous Bodies Section with dropdown -->
+
+                                            <li>
+                                                <a href="/cbse" tabindex="47">Autonomous Bodies<span>&#9662;</span></a>
+                                                <div>
+                                                    <ul>
+                                                        <li><a href="/cbse" tabindex="49">Central Board of Secondary
+                                                                Education</a></li>
+                                                        <li><a href="/nvs" tabindex="51">Jawahar Navodaya Vidyalaya</a>
+                                                        </li>
+                                                        <li><a href="/kvs" tabindex="53">Kendriya Vidyalaya
+                                                                Sangathan</a></li>
+                                                        <li><a href="/nbb" tabindex="55">National Bal Bhavan</a></li>
+                                                        <li><a href="/ncte" tabindex="57">National Council for Teacher
+                                                                Education</a></li>
+                                                        <li><a href="/ncert" tabindex="59">National Council of
+                                                                Educational Research and Training</a></li>
+                                                        <li><a href="/nios" tabindex="61">National Institute of Open
+                                                                Schooling</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+
+
+                                            <!-- Dashboard Section with dropdown -->
+                                            <li>
+                                                <a href="http://dashboard.udiseplus.gov.in/" target="_blank"
+                                                    tabindex="63"
+                                                    aria-label="Dashboard (link is external) - opens in new tab">Dashboard
+                                                    <span>&#9662;</span></a>
+                                                <div>
+                                                    <ul>
+                                                        <li><a href="https://nas.gov.in" target="_blank" tabindex="65"
+                                                                aria-label="National Achievement Survey (NAS) (link is external) - opens in new tab">National
+                                                                Achievement Survey (NAS)</a></li>
+                                                        <li><a href="https://dashboard.udiseplus.gov.in" target="_blank"
+                                                                tabindex="67"
+                                                                aria-label="UDISE+ (link is external) - opens in new tab">UDISE+</a>
+                                                        </li>
+                                                    </ul>
+                                                    <div>
+                                            </li>
+
+                                            <!-- Right to Education Section -->
+                                            <li><a href="/rte" tabindex="69">Right to Education</a></li>
+
+                                            <!-- States & UTs Section -->
+                                            <li><a href="/states_uts" tabindex="71">States &amp; UTs</a></li>
+
+                                            <!-- Budget Section with dropdown -->
+                                            <li>
+                                                <a href="/budget_2223" tabindex="73">Budget<span>&#9662;</span></a>
+                                                <div>
+                                                    <ul>
+                                                        <li><a href="/sites/default/files/GFR-2017.pdf"
+                                                                tabindex="75">GFR - 2017</a></li>
+                                                        <li><a href="/budget_2324" tabindex="77">2023-24</a></li>
+                                                        <li><a href="/budget_2223" tabindex="79">2022-23</a></li>
+                                                        <li><a href="/budget_2122" tabindex="81">2021-22</a></li>
+                                                        <li><a href="/budget_2021" tabindex="83">2020-21</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+
+                                            <!-- RTI Section -->
+                                            <li><a href="https://www.education.gov.in/rti_sel" target="_blank"
+                                                    tabindex="85">RTI <span><i class="fa fa-external-link"
+                                                            title="(link is external)"></i></span></a></li>
+
+                                            <!-- Upcoming Events Section with dropdown -->
+                                            <li>
+                                                <a href="/upcoming-events" tabindex="87">Upcoming
+                                                    Events<span>&#9662;</span></a>
+                                                <div>
+                                                    <ul>
+                                                        <li><a href="/archive-events" tabindex="89">Archive Events</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+
+
+
+    
+ 
+      
+    <!-- this is section contains footer which have more links and etc-->
+    <div id="bottom" class="footerWrap">
+        <div class="container">
+            <div class="row footer">
+                <div class="footer col-md-2">
+                    <nav aria-labelledby="main-links" id="main-links">
+                        <h2 tabindex="242">Main Links</h2>
+                        <ul>
+                            <li tabindex="243"><a href="/" class="is-active" tabindex="244">Home</a></li>
+                            <li tabindex="245"><a href="/about-us" title="About the Site" tabindex="246">About Us</a>
+                            </li>
+                            <li tabindex="247"><a href="/pab-minutes" tabindex="248">Documents &amp; Reports</a></li>
+                            <li tabindex="249"><a href="/statistics?field_statistics_category_target_id=233"
+                                    tabindex="250">Statistics</a></li>
+                            <li tabindex="251"><a href="/cbse" tabindex="252">Autonomous Bodies</a></li>
+                            <li tabindex="253"><a href="http://dashboard.udiseplus.gov.in/" target="_blank"
+                                    rel="noopener" tabindex="254">Dashboard</a></li>
+                            <li tabindex="255"><a href="/rte" tabindex="256">Right to Education</a></li>
+                            <li tabindex="257"><a href="/states_uts" tabindex="258">States &amp; UTs</a></li>
+                            <li tabindex="259"><a href="/budget_2223" tabindex="260">Budget</a></li>
+                            <li tabindex="261"><a href="https://www.education.gov.in/rti_sel" target="_blank"
+                                    rel="noopener" tabindex="262">RTI</a></li>
+                            <li tabindex="263"><a href="/upcoming-events" tabindex="264">Upcoming Events</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer col-md-2">
+                    <nav aria-labelledby="major-documents" id="major-documents">
+                        <h2 tabindex="265">Major Documents</h2>
+                        <ul>
+                            <li tabindex="266"><a href="/pab-minutes" tabindex="267">PAB Minutes</a></li>
+                            <li tabindex="268"><a href="/recent-report" tabindex="269">Recent Report</a></li>
+                            <li tabindex="270"><a href="/new-updated-guidelines" tabindex="271">New/Updated
+                                    Guidelines</a></li>
+                            <li tabindex="272"><a href="/monthly-summary" tabindex="273">Monthly Summary</a></li>
+                            <li tabindex="274"><a href="/detailed-demand-for-grants" tabindex="275">Detailed Demand for
+                                    Grants</a></li>
+                            <li tabindex="276"><a href="/financial-sanction" tabindex="277">Financial Sanction</a></li>
+                            <li tabindex="278"><a href="/finance_minutes" tabindex="279">Finance Minutes</a></li>
+                            <li tabindex="280"><a href="/planning" tabindex="281">Planning</a></li>
+                            <li tabindex="282"><a href="/audit-report" tabindex="283">Audit Report</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer col-md-2">
+                    <nav aria-labelledby="quick-links" id="quick-links">
+                        <h2 tabindex="284">Quick Links</h2>
+                        <ul>
+                            <li tabindex="285"><a href="https://services.india.gov.in" target="_blank" rel="noopener"
+                                    tabindex="286">Government Services</a></li>
+                            <li tabindex="287"><a href="http://dashboard.udiseplus.gov.in/" target="_blank"
+                                    rel="noopener" tabindex="288">Dashboard</a></li>
+                            <li tabindex="289"><a href="https://repository.education.gov.in" target="_blank"
+                                    rel="noopener" tabindex="290">Digital Repository</a></li>
+                            <li tabindex="291"><a href="https://www.education.gov.in" target="_blank" rel="noopener"
+                                    tabindex="292">MoE Website</a></li>
+                            <li tabindex="293"><a href="https://www.education.gov.in/higher_education" target="_blank"
+                                    rel="noopener" tabindex="294">D/o Higher Education</a></li>
+                            <li tabindex="295"><a href="http://schoolgis.nic.in/" target="_blank" rel="noopener"
+                                    tabindex="296">School GIS</a></li>
+                            <li tabindex="297"><a
+                                    href="https://datastudio.google.com/reporting/8c6be090-6e6c-4285-8e05-61711254b5a3/page/BV9v"
+                                    target="_blank" rel="noopener" tabindex="298">Web Analytics</a></li>
+                            <li tabindex="299"><a href="https://www.india.gov.in" target="_blank" rel="noopener"
+                                    tabindex="300">National Portal</a></li>
+                            <li tabindex="301"><a href="/feedback-form" tabindex="302">Feedback</a></li>
+                            <li tabindex="303"><a href="https://pgportal.gov.in/Registration" target="_blank"
+                                    rel="noopener" tabindex="304">Grievances</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer col-md-2">
+                    <nav aria-labelledby="other-links" id="other-links">
+                        <h2 tabindex="305">Other Links</h2>
+                        <ul>
+                            <li tabindex="306"><a href="/terms-condition" tabindex="307">Terms &amp; Conditions</a></li>
+                            <li tabindex="308"><a href="/copyright-policy" tabindex="309">Copyright Policy</a></li>
+                            <li tabindex="310"><a href="/hyperlink-policy" tabindex="311">Hyperlink Policy</a></li>
+                            <li tabindex="312"><a href="/privacy-policy" tabindex="313">Privacy Policy</a></li>
+                            <li tabindex="314"><a href="/disclaimer" tabindex="315">Disclaimer</a></li>
+                            <li tabindex="316"><a href="/help" tabindex="317">Help</a></li>
+                            <li tabindex="318"><a href="/sitemap" tabindex="319">Sitemap</a></li>
+                            <li tabindex="320"><a href="/web-information-manager" tabindex="321">Web Information
+                                    Manager</a></li>
+                            <li tabindex="322"><a href="/contact_us" tabindex="323">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer col-md-2">
+                    <div role="contentinfo">
+                        <p tabindex="324" title="National Informatics Centre (NIC)">
+                            <img alt="NIC Logo" src="11.png">
+                        </p>
+                        <p tabindex="325">This site is designed, developed, hosted, and maintained by National
+                            Informatics Centre (NIC),Government of India.</p>
+                        <h2 tabindex="326">Follow us on:</h2>
+                        <ul>
+                            <li tabindex="327"><a href="https://twitter.com/EduMinOfIndia" target="_blank"
+                                    rel="noopener" tabindex="328"><img alt="Twitter" src="twitter-icon.png"></a></li>
+                            <li tabindex="329"><a href="https://www.facebook.com/EduMinOfIndia" target="_blank"
+                                    rel="noopener" tabindex="330"><img alt="Facebook" src="facebook-icon.png"></a></li>
+                            <li tabindex="331"><a href="https://www.youtube.com/user/HRDMinistry" target="_blank"
+                                    rel="noopener" tabindex="332"><img alt="Youtube" src="youtube-icon.png"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div role="contentinfo" class="disclaimer">
+        <div class="container">
+            <p class="float-left">Content owned &amp; provided by Department of School Education &amp; Literacy,
+                Ministry of Education, Government of India</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
