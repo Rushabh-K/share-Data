@@ -1,0 +1,17 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#add{
+    background-color: aqua;
+}
+#calculator{
+    background-color: aqua;
+    text-align: center;
+    border-left:1000px;
+    padding: 10px;
+    border: 10px;
+    margin-left: 500px;
+    margin-right: 500px;
+    line-height: 30px;
+}

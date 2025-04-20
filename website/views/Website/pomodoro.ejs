@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="/stylesheet/website/pomodoro.css">
+    <link rel="stylesheet" href="/stylesheet/website/Dashboard.css">
+    <style>
+      
+      .sidebar {
+    width: 250px;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    padding: 20px;
+    height: 100vh;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    left: 0;
+    top: 0;
+    border-radius: 20px; /* Curvy corners */
+    backdrop-filter: blur(10px); /* Glass effect */
+    border: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 12px; /* Curvy menu items */
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background-color: #e0d7ff;
+    color: #6c5ce7;
+}
+
+.upgrade {
+    background: linear-gradient(135deg, #b085f5, #7c4dff);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 20px; /* Rounded upgrade card */
+    margin-top: 20px;
+}
+
+
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            background-color: #f6d6d6;
+        }
+
+        .sidebar {
+            width: 220px;
+            background-color: #fff;
+            border-right: 2px solid #f0f0f5;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h2 {
+            background-color: #6c5ce7;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            padding: 10px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu a:hover {
+            background-color: #e0d7ff;
+            color: #6c5ce7;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .pomodoro-container {
+            background-color: #d84141;
+            border-radius: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: #fff;
+            padding: 20px;
+            width: 350px;
+            text-align: center;
+        }
+
+        .tabs button {
+            background-color: transparent;
+            color: #fff;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+
+        .tabs button.active {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+        }
+
+        .timer {
+            font-size: 64px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .start-button {
+            background-color: #fff;
+            color: #d84141;
+            border: none;
+            padding: 10px 30px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <div class="container">
+            <div class="left">
+                <header>
+                    <div class="logo">
+                        <h2>Asep Group</h2>
+                        <div class="close">
+                            <span class="material-symbols-outlined">
+                                close
+                            </span>
+                        </div>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="/efficientHours">
+                                    <span class="material-symbols-outlined full">
+                                        dashboard
+                                    </span>
+                                    <span class="title">Dashboard</tspan>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/efficientHours/project">
+                                    <span class="material-symbols-outlined ">
+                                    check_box
+                                    </span>
+                                    <span class="title">Project</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/efficientHours/pomodoro">
+                                    <span class="material-symbols-outlined ">
+                                      Group
+                                    </span>
+                                    <span class="title">Pomodoro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/efficientHours/myTask">
+                                    <span class="material-symbols-outlined ">
+                                    task
+                                    </span>
+                                    <span class="title">My Task</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/efficientHours/messages">
+                                    <span class="material-symbols-outlined ">
+                                chat_bubble
+                                    </span>
+                                    <span class="title">Message</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/efficientHours/billing">
+                                    <span class="material-symbols-outlined ">
+                                    account_balance_wallet
+                                    </span>
+                                    <span class="title">My Billing</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="upgrade">
+                    <h4>UPgrade to<bold>PRO</bold> for<br> more features</h4>
+                    <div class="upbtn">
+                        <button>Upgrade</button>
+                    </div>
+                </div>
+            </div>
+     <main>
+            <div class="right">
+                <div class="top" style="width:230%;">
+                    <div class="searchBx">
+                        <h2>Pomodoro</h2>
+                    </div>
+                    <div class="user">
+                        <span class="material-symbols-outlined ">
+                            notifications
+                        </span>
+                        <div class="toggle">
+                            <span class="material-symbols-outlined ">
+                              menu
+                            </span>
+                            <span class="material-symbols-outlined ">
+                              close
+                            </span>
+                        </div>
+                        <div class="profile-container">
+                            <div class="profile-btn" onclick="toggleMenu()">
+                                <img src="/images/DashBoard Images/WhatsApp Image 2025-01-18 at 17.54.56_35de9f9c.jpg" alt="Profile Picture">
+                                <span>EfficientHours</span>
+                            </div>
+                            <div class="dropdown-menu" id="dropdownMenu">
+                                <a href="#"><i class="fas fa-user"></i>Edit Profile</a>
+                                <a href="#"><i class="fas fa-cog"></i><strong>Settings & Privacy</strong></a>
+                                <a href="#"><i class="fas fa-question-circle"></i>Help & Support</a>
+                                <a href="#"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+
+                <div class="pomodoro-container">
+                    <div class="tabs">
+                        <button class="active" onclick="setTimer(1500, this)">Pomodoro</button>
+                        <button onclick="setTimer(300, this)">Short Break</button>
+                        <button onclick="setTimer(900, this)">Long Break</button>
+                    </div>
+                    <div class="timer">25:00</div>
+                    <button class="start-button" onclick="toggleTimer()">START</button>
+                    <div class="task-section">
+                        <h3>Tasks</h3>
+                        <button class="add-task" onclick="addTask()">+ Add Task</button>
+                        <ul class="task-list"></ul>
+                    </div>
+                </div>
+
+            </div>
+                
+           
+        </main>
+        </div>
+
+
+    <script>
+        let timer;
+        let timeLeft = 1500;
+        let running = false;
+        const timerDisplay = document.querySelector(".timer");
+
+        function setTimer(seconds, element) {
+            clearInterval(timer);
+            timeLeft = seconds;
+            updateDisplay();
+            running = false;
+            document.querySelectorAll(".tabs button").forEach(btn => btn.classList.remove("active"));
+            element.classList.add("active");
+        }
+
+        function toggleTimer() {
+            if (running) {
+                clearInterval(timer);
+                document.querySelector(".start-button").textContent = "START";
+            } else {
+                timer = setInterval(() => {
+                    if (timeLeft > 0) {
+                        timeLeft--;
+                        updateDisplay();
+                    } else {
+                        clearInterval(timer);
+                        alert("Time's up!");
+                    }
+                }, 1000);
+                document.querySelector(".start-button").textContent = "PAUSE";
+            }
+            running = !running;
+        }
+
+        function updateDisplay() {
+            let minutes = Math.floor(timeLeft / 60);
+            let seconds = timeLeft % 60;
+            timerDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        function addTask() {
+            let taskText = prompt("Enter your task:");
+            if (taskText) {
+                let taskList = document.querySelector(".task-list");
+                let taskItem = document.createElement("li");
+                taskItem.textContent = taskText;
+                taskList.appendChild(taskItem);
+            }
+        }
+    </script>
+</body>
+</html>

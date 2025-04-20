@@ -1,0 +1,6 @@
+Mongoose
+
+Schema- Define the structure
+      Scheme model
+      using model we do CURD operations
+       
